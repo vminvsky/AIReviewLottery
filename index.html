@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Review Lottery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <header>
+        <h2 style="font-family: 'Roboto', sans-serif;">Did you win this year's ICLR</h2>
+        <h1 style="font-family: 'Roboto', sans-serif;">AI REVIEW LOTTERY?</h1>
+        <p style="font-family: 'Roboto', sans-serif;">Enter your paper's title to find out!</p>
+        <input type="text" id="paperId" placeholder="Enter part of the paper title..." oninput="updateSearchResults()">
+        <div id="searchResults" class="search-results" style="font-family: 'Roboto', background-color: #F6F9FC;"></div>
+        <p id="description" style="font-family: 'Roboto', sans-serif;"><b><span style="font-size: 1.2em;">What is the AI
+              Review Lottery?</span></b><br>
+        <ul style="font-family: 'Roboto', sans-serif;">
+          <li style="margin: 0; margin-top: 5px; text-align: left;">We estimate over <b>15%</b> of reviews at ICLR 24
+            were
+            <b>AI-assisted</b>. That's <b>4,428</b> reviews!
+          </li>
+          <li style="margin: 0; margin-top: 5px; text-align: left;">AI-assisted reviews assigned <b>higher scores</b>
+            than human reviews
+            <b>53.7%</b> of the time.
+          </li>
+          <li style="margin: 0; margin-top: 5px; text-align: left;">Borderline papers were <b>4.9%</b> more likely to be
+            accepted <b>if
+              they received an AI-assisted review</b>.</li>
+        </ul>
+        </p>
+        </p>
+      </header>
+      <div id="result"></div>
+    </div>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+      <img id="loadingGif" src="assets/lotter-win.gif" alt="Loading..." />
+    </div>
+    <div id="result"></div>
+    <footer style="font-family: 'Roboto', sans-serif;"><a href="https://dlab.epfl.ch/" target="_blank"><img
+          src="assets/dlab_img.svg" style="margin-right: 10px; max-width: 20px; position: relative; top: 5px;"
+          alt="DLab Image"></a>For any concerns
+      or suggestions, please contact: <a href='mailto:giuseppe.russo@epfl.ch'
+        class='peppe'>giuseppe.russo@epfl.ch</a><br>
+      <a href="https://dlab.epfl.ch/" target="_blank"><img src="assets/gptzero.png"
+          style="margin-right: 10px; max-width: 20px; position: relative; top: 5px;" alt="GPTZero logo"></a>AI detection
+      powered by GPTZero.
+    </footer>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <!-- <script src="script3.js"></script> -->
+  </div>
+</body>
+
+</html>
