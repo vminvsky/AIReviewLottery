@@ -40,15 +40,23 @@ function selectPaper(id, isAI, decision) {
   showLoadingOverlay(isAI);
 
   setTimeout(() => {
-    if (isAI === 'true' && decision === 'accepted') {
-      window.location.href = 'win-accepted.html';
-    } else if (isAI === 'false' && decision === 'rejected') {
-      window.location.href = 'lose-rejected.html';
-    } else if (isAI === 'true' && decision === 'rejected') {
-      window.location.href = 'win-rejected.html';
-    } else if (isAI === 'false' && decision === 'accepted') {
-      window.location.href = 'lose-accepted.html';
-    }
+    hideLoadingOverlay(isAI);
+
+    // Store the isAI and decision values in session storage
+    sessionStorage.setItem('isAI', isAI);
+    sessionStorage.setItem('decision', decision);
+
+    window.location.href = 'results.html';
+
+    // if (isAI === 'true' && decision === 'accepted') {
+    //   window.location.href = 'win-accepted.html';
+    // } else if (isAI === 'false' && decision === 'rejected') {
+    //   window.location.href = 'lose-rejected.html';
+    // } else if (isAI === 'true' && decision === 'rejected') {
+    //   window.location.href = 'win-rejected.html';
+    // } else if (isAI === 'false' && decision === 'accepted') {
+    //   window.location.href = 'lose-accepted.html';
+    // }
   }, 3000); // Wait for 3 seconds before redirecting
 }
 
@@ -60,4 +68,8 @@ function showLoadingOverlay(isAI) {
   }
 
   document.getElementById('loadingOverlay').style.display = 'flex';
+}
+
+function hideLoadingOverlay() {
+  document.getElementById('loadingOverlay').style.display = 'none';
 }

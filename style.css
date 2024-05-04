@@ -1,16 +1,24 @@
 body,
 html {
-  margin: 0;
+  margin: 15px;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: black;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
   width: 80%;
-  margin: 20px auto;
+  padding: 20px;
+  margin-top: 20px;
+  /* margin-left: 15px;
+  margin-right: 15px; */
+  /* margin: 15px auto; */
   text-align: center;
   max-width: 500px;
 }
@@ -51,14 +59,14 @@ button {
 }
 
 .search-result-item {
-  padding: 10px;
+  padding: 3px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
   font-family: Helvetica, sans-serif;
 }
 
 .search-result-item:hover {
-  background-color: #d87d7d;
+  background-color: lightgoldenrodyellow;
 }
 
 .wrapper {
@@ -73,9 +81,10 @@ main {
 
 footer {
   /* background-color: #111111; */
-  padding: 20px;
+  padding: 25px;
+  margin: 10px;
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .loading-overlay {
@@ -93,7 +102,8 @@ footer {
 }
 
 .peppe {
-  color: #8b0e0e; /* trying to get dlab color */
+  color: #C5050A;
+  /* trying to get dlab color */
   background-color: transparent;
   text-decoration: none;
 }
