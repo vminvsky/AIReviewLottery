@@ -6,7 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2138B794ZF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() {dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-2138B794ZF');
@@ -19,50 +19,56 @@
 
 <body>
   <!-- <div class="wrapper"> -->
-    <div class="container">
-      <header>
-        <h3 style="font-family: 'Roboto', sans-serif;">Did you win this year's ICLR</h3>
-        <h1 style="font-family: 'Roboto', sans-serif;">AI REVIEW LOTTERY?</h1>
-        <p style="font-family: 'Roboto', sans-serif;">Enter your paper's title to find out!</p>
-        <input type="text" id="paperId" placeholder="Enter part of the paper title..." oninput="updateSearchResults()" style="border-radius: 15px;">
-        <div id="searchResults" class="search-results" style="font-family: 'Roboto', background-color: #F6F9FC; padding: 0 5%; "></div>
-        <div style="border: 1px solid #ccc;"></div>
-        <p id="description" style="font-family: 'Roboto', sans-serif;"><b><span style="font-size: 1.0em; background-color: lightgoldenrodyellow;">TL;DR: "Lucky" papers receive AI-assisted reviews</span></b><br>
-        <ul style="font-family: 'Roboto', sans-serif;">
-          <li style="margin: 0; margin-top: 5px; text-align: left;">We estimate over <b>15%</b> of reviews at ICLR 24
-            were
-            <b>AI-assisted</b>. That's <b>4,428</b> reviews!
-          </li>
-          <li style="margin: 0; margin-top: 5px; text-align: left;">AI-assisted reviews assigned <b>higher scores</b>
-            than human reviews
-            <b>53.7%</b> of the time.
-          </li>
-          <li style="margin: 0; margin-top: 5px; text-align: left;">Borderline papers were <b>4.9%</b> more likely to be
-            accepted <b>if
-              they received an AI-assisted review</b>.</li>
-          <li style="margin: 0; margin-top: 5px; text-align: left;">
-            Lucky papers are <b>randomly assigned</b> a reviewer that uses <b>AI assistance</b>, which on average <b>increases scores and acceptance rates</b>.</li>
-        </ul>
-        </p>
-        </p>
-      </header>
-      <div id="result"></div>
-    </div>
-    <!-- Loading Overlay -->
-    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
-      <img id="loadingGif" src="assets/lottery-win.gif" alt="Loading..." />
-    </div>
+  <div class="container">
+    <header>
+      <h3 style="font-family: 'Roboto', sans-serif;">Did you win this year's ICLR</h3>
+      <h1 style="font-family: 'Roboto', sans-serif;">AI REVIEW LOTTERY?</h1>
+      <p style="font-family: 'Roboto', sans-serif;">Enter your paper's title to find out!</p>
+      <input type="text" id="paperId" placeholder="Enter part of the paper title..." oninput="updateSearchResults()"
+        style="border-radius: 15px;">
+      <div id="searchResults" class="search-results"
+        style="font-family: 'Roboto', background-color: #F6F9FC; padding: 0 5%; "></div>
+      <div style="border: 1px solid #ccc;"></div>
+      <p id="description" style="font-family: 'Roboto', sans-serif;"><b><span
+            style="font-size: 1.0em; background-color: lightgoldenrodyellow;">TL;DR: "Lucky" papers receive AI-assisted
+            reviews</span></b><br>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li style="margin: 0; margin-top: 5px; text-align: left;">We estimate over <b>15%</b> of reviews at ICLR 24
+          were
+          <b>AI-assisted</b>. That's <b>4,428</b> reviews!
+        </li>
+        <li style="margin: 0; margin-top: 5px; text-align: left;">AI-assisted reviews assigned <b>higher scores</b>
+          than human reviews
+          <b>53.4%</b> of the time.
+        </li>
+        <li style="margin: 0; margin-top: 5px; text-align: left;">Borderline papers were <b>4.9%</b> more likely to be
+          accepted <b>if
+            they received an AI-assisted review</b>.</li>
+        <li style="margin: 0; margin-top: 5px; text-align: left;">
+          Lucky papers are <b>randomly assigned</b> a reviewer that uses <b>AI assistance</b>, which on average
+          <b>increases scores and acceptance rates</b>.
+        </li>
+      </ul>
+      </p>
+      </p>
+    </header>
     <div id="result"></div>
-    <div id="footer-container"></div>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            });
-    </script>
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+  </div>
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+    <img id="loadingGif" src="assets/lottery-win.gif" alt="Loading..." />
+  </div>
+  <div id="result"></div>
+  <div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
   <!-- </div> -->
 </body>
 
