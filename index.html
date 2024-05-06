@@ -16,7 +16,8 @@
         <h1 style="font-family: 'Roboto', sans-serif;">AI REVIEW LOTTERY?</h1>
         <p style="font-family: 'Roboto', sans-serif;">Enter your paper's title to find out!</p>
         <input type="text" id="paperId" placeholder="Enter part of the paper title..." oninput="updateSearchResults()" style="border-radius: 15px;">
-        <div id="searchResults" class="search-results" style="font-family: 'Roboto', background-color: #F6F9FC; padding: 0 5%;"></div>
+        <div id="searchResults" class="search-results" style="font-family: 'Roboto', background-color: #F6F9FC; padding: 0 5%; "></div>
+        <div style="border: 1px solid #ccc;"></div>
         <p id="description" style="font-family: 'Roboto', sans-serif;"><b><span style="font-size: 1.0em; background-color: lightgoldenrodyellow;">TL;DR: "Lucky" papers receive AI-assisted reviews</span></b><br>
         <ul style="font-family: 'Roboto', sans-serif;">
           <li style="margin: 0; margin-top: 5px; text-align: left;">We estimate over <b>15%</b> of reviews at ICLR 24
@@ -40,7 +41,7 @@
     </div>
     <!-- Loading Overlay -->
     <div id="loadingOverlay" class="loading-overlay" style="display: none;">
-      <img id="loadingGif" src="assets/lotter-win.gif" alt="Loading..." />
+      <img id="loadingGif" src="assets/lottery-win.gif" alt="Loading..." />
     </div>
     <div id="result"></div>
     <div id="footer-container"></div>
@@ -53,8 +54,7 @@
     </script>
     <script src="data.js"></script>
     <script src="script.js"></script>
-    <!-- <script src="script3.js"></script> -->
-  </div>
+  <!-- </div> -->
 </body>
 
 </html>

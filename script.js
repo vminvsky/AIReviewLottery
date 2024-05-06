@@ -40,6 +40,8 @@ function selectPaper(id, isAI, decision) {
   showLoadingOverlay(isAI);
 
   setTimeout(() => {
+    document.getElementById('paperId').value = ''; // Empty paperId element
+    updateSearchResults(); // Update search results
     hideLoadingOverlay(isAI);
 
     // Store the isAI and decision values in session storage
@@ -48,15 +50,6 @@ function selectPaper(id, isAI, decision) {
 
     window.location.href = 'results.html';
 
-    // if (isAI === 'true' && decision === 'accepted') {
-    //   window.location.href = 'win-accepted.html';
-    // } else if (isAI === 'false' && decision === 'rejected') {
-    //   window.location.href = 'lose-rejected.html';
-    // } else if (isAI === 'true' && decision === 'rejected') {
-    //   window.location.href = 'win-rejected.html';
-    // } else if (isAI === 'false' && decision === 'accepted') {
-    //   window.location.href = 'lose-accepted.html';
-    // }
   }, 3000); // Wait for 3 seconds before redirecting
 }
 

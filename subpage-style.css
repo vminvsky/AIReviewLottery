@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     height: auto;
     margin: 25px 0 0 0;
     font-family: 'Roboto', sans-serif;
@@ -9,39 +10,42 @@ body, html {
 }
 
 .container {
-  width: 100%;
-  /* margin: 20px auto; */
-  text-align: center;
-  max-width: 1000px;
+    width: 100%;
+    /* margin: 20px auto; */
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    max-width: 1000px;
 }
 
 h1 {
     margin: 10px 0;
 }
+
 p {
     margin: 10px 0;
     font-size: 14px;
     padding-bottom: 20px;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
+
 a {
     text-decoration: none;
-    color: black; /* Default text color */
+    color: black;
 }
 
 .peppe {
-  color: #8b0e0e; /* trying to get dlab color */
-  background-color: transparent;
-  text-decoration: none;
+    color: #C5050A;
+    background-color: transparent;
+    text-decoration: none;
 }
 
-
 footer {
-  /* background-color: #111111; */
-  padding: 20px;
-  text-align: center;
-  font-size: 12px;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
 }
